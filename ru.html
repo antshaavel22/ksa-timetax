@@ -645,6 +645,11 @@
             <label class="form__label" for="diopter">Сила очков (диоптрии)</label>
             <input class="form__input" type="text" id="diopter" name="diopter" placeholder="напр. −3.5 или не знаю точно">
           </div>
+
+          <div class="form__group">
+            <label class="form__label" for="campaign_code">Промокод</label>
+            <input class="form__input form__input--short" type="text" id="campaign_code" name="campaign_code" placeholder="Введите код (если есть)">
+          </div>
           <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-2);">Записаться на обследование Flow3 — 69 €</button>
           <p class="form__note">* Стоимость обследования (69 €) полностью вычитается из цены процедуры, если вы запишетесь в течение 60 дней.</p>
           <p class="form__note">Данные используются только для записи на обследование. Обычно отвечаем в течение одного рабочего дня.</p>
@@ -768,6 +773,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const email = form.email.value.trim();
   const phone = form.phone.value.trim();
   const diopter = form.diopter.value.trim();
+  const campaign_code = form.campaign_code ? form.campaign_code.value.trim() : '';
 
   if (!name || !age || !email || !phone) {
     alert('Пожалуйста, заполните все обязательные поля.');
@@ -790,6 +796,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     'Э-почта: ' + email,
     'Телефон: ' + phone,
     'Диоптрии: ' + (diopter || 'Не указано'),
+    'Промокод: ' + (campaign_code || 'Не указан'),
     'Язык: RU',
     'Страница: время-налог (time-tax)',
     '',
@@ -810,6 +817,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
         email: email,
         phone: phone,
         diopter: diopter || 'Не указано',
+        campaign_code: campaign_code || 'Не указан',
         message: messageBody
       })
     });
@@ -829,7 +837,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
       'Возраст: ' + age + '\n' +
       'Э-почта: ' + email + '\n' +
       'Телефон: ' + phone + '\n' +
-      'Сила очков: ' + (diopter || 'Не указано') + '\n\n' +
+      'Сила очков: ' + (diopter || 'Не указано') + '\n' +
+      'Промокод: ' + (campaign_code || 'Не указан') + '\n\n' +
       'Пожалуйста, свяжитесь с пациентом для согласования времени обследования.'
     );
     window.location.href = 'mailto:info@ksa.ee?subject=' + subject + '&body=' + body;

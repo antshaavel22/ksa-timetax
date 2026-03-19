@@ -644,6 +644,11 @@
             <label class="form__label" for="diopter">Prillide tugevus (dioptrid)</label>
             <input class="form__input" type="text" id="diopter" name="diopter" placeholder="nt −3.5 või ei tea täpselt">
           </div>
+
+          <div class="form__group">
+            <label class="form__label" for="campaign_code">Kampaaniakood</label>
+            <input class="form__input form__input--short" type="text" id="campaign_code" name="campaign_code" placeholder="Sisesta kood (kui on)">
+          </div>
           <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-2);">Broneeri Flow3 uuring — 69 €</button>
           <p class="form__note">* Uuringu maksumus (69 €) arvestatakse 100% maha, kui tellite protseduuri 60 päeva jooksul.</p>
           <p class="form__note">Andmeid kasutatakse ainult uuringu broneerimiseks. Vastame tavaliselt ühe tööpäeva jooksul.</p>
@@ -767,6 +772,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const email = form.email.value.trim();
   const phone = form.phone.value.trim();
   const diopter = form.diopter.value.trim();
+  const campaign_code = form.campaign_code ? form.campaign_code.value.trim() : '';
 
   if (!name || !age || !email || !phone) {
     alert('Palun täitke kõik kohustuslikud väljad.');
@@ -789,6 +795,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     'E-post: ' + email,
     'Telefon: ' + phone,
     'Dioptrid: ' + (diopter || 'Ei märgitud'),
+    'Kampaaniakood: ' + (campaign_code || 'Puudub'),
     'Keel: ET',
     'Leht: aegamaks (time-tax)',
     '',
@@ -809,6 +816,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
         email: email,
         phone: phone,
         diopter: diopter || 'Ei märgitud',
+        campaign_code: campaign_code || 'Puudub',
         message: messageBody
       })
     });
@@ -828,7 +836,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
       'Vanus: ' + age + '\n' +
       'E-post: ' + email + '\n' +
       'Telefon: ' + phone + '\n' +
-      'Prillide tugevus: ' + (diopter || 'Ei märgitud') + '\n\n' +
+      'Prillide tugevus: ' + (diopter || 'Ei märgitud') + '\n' +
+      'Kampaaniakood: ' + (campaign_code || 'Puudub') + '\n\n' +
       'Palun võtke patsiendiga ühendust uuringu aja kokkuleppimiseks.'
     );
     window.location.href = 'mailto:info@ksa.ee?subject=' + subject + '&body=' + body;

@@ -644,6 +644,11 @@
             <label class="form__label" for="diopter">Prescription strength (dioptres)</label>
             <input class="form__input" type="text" id="diopter" name="diopter" placeholder="e.g. −3.5 or not sure">
           </div>
+
+          <div class="form__group">
+            <label class="form__label" for="campaign_code">Campaign code</label>
+            <input class="form__input form__input--short" type="text" id="campaign_code" name="campaign_code" placeholder="Enter code (if any)">
+          </div>
           <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-2);">Book a Flow3 exam — €69</button>
           <p class="form__note">* The exam fee (€69) is 100% deducted if you book the procedure within 60 days.</p>
           <p class="form__note">Your data is used only for booking. We typically reply within one business day.</p>
@@ -767,6 +772,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const email = form.email.value.trim();
   const phone = form.phone.value.trim();
   const diopter = form.diopter.value.trim();
+  const campaign_code = form.campaign_code ? form.campaign_code.value.trim() : '';
 
   if (!name || !age || !email || !phone) {
     alert('Please fill in all required fields.');
@@ -789,6 +795,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     'Email: ' + email,
     'Phone: ' + phone,
     'Dioptres: ' + (diopter || 'Not specified'),
+    'Campaign code: ' + (campaign_code || 'None'),
     'Language: EN',
     'Page: time-tax',
     '',
@@ -809,6 +816,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
         email: email,
         phone: phone,
         diopter: diopter || 'Not specified',
+        campaign_code: campaign_code || 'None',
         message: messageBody
       })
     });
