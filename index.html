@@ -655,7 +655,15 @@ src="https://www.facebook.com/tr?id=116445785392738&ev=PageView&noscript=1"/></n
             </div>
             <div class="form__group">
               <label class="form__label" for="age">Vanus</label>
-              <input class="form__input" type="number" id="age" name="age" placeholder="nt 28" min="18" max="60" required>
+              <select class="form__input" id="age" name="age" required>
+                <option value="" disabled selected>Vali vanus</option>
+                <option value="18-21">18–21</option>
+                <option value="22-25">22–25</option>
+                <option value="26-30">26–30</option>
+                <option value="31-35">31–35</option>
+                <option value="36-40">36–40</option>
+                <option value="41-45">41–45</option>
+              </select>
             </div>
           </div>
           <div class="form__group">
@@ -675,6 +683,7 @@ src="https://www.facebook.com/tr?id=116445785392738&ev=PageView&noscript=1"/></n
             <label class="form__label" for="campaign_code">Kampaaniakood</label>
             <input class="form__input form__input--short" type="text" id="campaign_code" name="campaign_code" placeholder="Sisesta kood (kui on)">
           </div>
+          <p class="form__note" style="margin-bottom:var(--space-2);color:var(--text-secondary);font-size:0.85rem;">Flow3 sobib 18–45-aastastele lühinägelikele. Uuringul selgitame, kas protseduur sobib just sulle.</p>
           <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-2);">Broneeri Flow3 uuring — 69 €</button>
           <p class="form__note">* Uuringu maksumus (69 €) arvestatakse 100% maha, kui tellite protseduuri 60 päeva jooksul.</p>
           <p class="form__note">Andmeid kasutatakse ainult uuringu broneerimiseks. Vastame tavaliselt ühe tööpäeva jooksul.</p>
@@ -866,7 +875,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
       'Kampaaniakood: ' + (campaign_code || 'Puudub') + '\n\n' +
       'Palun võtke patsiendiga ühendust uuringu aja kokkuleppimiseks.'
     );
-    window.location.href = 'mailto:info@ksa.ee?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:registreerumised@ksa.ee?subject=' + subject + '&body=' + body;
 
     form.style.display = 'none';
     document.getElementById('formSuccess').classList.add('active');
