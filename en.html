@@ -8,6 +8,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KCZVRJ8');</script>
 <!-- End Google Tag Manager -->
+<!-- Google Ads tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18030087653"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18030087653');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>100+ Days of Your Life — KSA Eye Centre | Flow3 Laser Eye Surgery</title>
@@ -861,6 +869,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
     if (data.success) {
       form.style.display = 'none';
       document.getElementById('formSuccess').classList.add('active');
+      // Fire Google Ads conversion event
+      gtag('event', 'conversion', {'send_to': 'AW-18030087653/lXXnCMHKwI8cEOWbtZVD'});
       // Fire GTM conversion event
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
