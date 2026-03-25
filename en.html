@@ -861,6 +861,17 @@ document.getElementById('contactForm').addEventListener('submit', async function
     if (data.success) {
       form.style.display = 'none';
       document.getElementById('formSuccess').classList.add('active');
+      // Fire GTM conversion event
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'form_submission',
+        'form_name': 'booking_inquiry',
+        'lp_source': 'LP-TimeTax-EN'
+      });
+      // Fire Meta Pixel Lead event
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {content_name: 'LP-TimeTax-EN'});
+      }
     } else {
       throw new Error(data.message || 'Submission failed');
     }
