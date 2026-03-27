@@ -1,0 +1,57 @@
+# KSA Silmakeskus (KSA Eye Centre)
+> Estonia's leading laser eye surgery clinic since 2005
+
+## Key Facts
+- 55,000+ laser procedures performed
+- 0 ectasia cases in 20+ years (zero complications)
+- Up to 7-year guarantee — longest in the Baltics
+- Locations: Tallinn (J. Vilmsi 5) and Tartu (Riia 2)
+- Phone: +372 644 5060
+- Website: https://ksa.ee
+
+## Core Procedure: Flow3 SmartSurface
+- Energy-optimized touch-free laser vision correction
+- Uses 25-50% less energy than competitors (LASIK, SMILE)
+- No incision, no flap — pure laser surface ablation
+- SCHWIND AMARIS technology
+- Procedure takes under 1 minute per eye
+- Clear vision next day, back to sports in 7 days
+- Flow3 Standard: €2,990 (both eyes)
+- Flow3 Signature: €3,990 (both eyes)
+- Instalment available from €63/month via Inbank or LHV
+
+## Flow3 Eye Examination
+- 60-minute comprehensive eye exam + consultation
+- Price: €69
+- 100% deducted from procedure price if patient proceeds within 60 days
+
+## Medical Team
+- Dr. Ants Haavel — CEO and Ophthalmic Surgeon, 20+ years experience
+- Dr. Karl-Erik Tillmann — Ophthalmic Surgeon
+- Op. nurse Ave Treier — Theatre nurse and patient journey lead
+
+## Safety Record
+- Zero ectasia cases in entire history (unique in the Baltics)
+- 26 out of 27 KSA staff members chose Flow3 for their own eyes
+- 93% of patients say Flow3 was their best life decision
+- 99% would recommend to a friend
+- FDA PROWL study: over 95% satisfaction rate for laser vision correction
+
+## Why Flow3 vs LASIK/SMILE
+- No corneal flap creation (eliminates flap-related complications)
+- Touch-free (no instrument contacts the eye)
+- 25-50% less energy than LASIK or SMILE
+- Suitable for thin corneas (where LASIK is contraindicated)
+- Preserves more corneal tissue
+
+## Languages
+- Estonian (primary)
+- Russian
+- English
+
+## Landing Pages
+- Best time to invest in yourself: https://ksa-besttime.vercel.app
+- Financing options: https://ksa-finance.vercel.app
+- Time tax of glasses: https://ksa-timetax.vercel.app
+- Why give up glasses: https://ksa-glasses.vercel.app
+- Sports and active life: https://ksa-sports.vercel.app
